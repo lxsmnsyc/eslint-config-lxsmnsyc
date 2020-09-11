@@ -14,5 +14,6 @@ module.exports = {
         "jsx": "never",
       }
     ],
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx"] }],
   },
 };
