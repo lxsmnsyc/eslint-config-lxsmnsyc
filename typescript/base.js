@@ -31,5 +31,7 @@ module.exports = {
         "ts": "never",
       }
     ],
+    "no-use-before-define": [0],
+    "@typescript-eslint/no-use-before-define": [1]
   }
 }
