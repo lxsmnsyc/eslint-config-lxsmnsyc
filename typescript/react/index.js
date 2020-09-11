@@ -1,4 +1,3 @@
-const base = require('../../base');
 const baseConfig = require('../base');
 
 module.exports = {
