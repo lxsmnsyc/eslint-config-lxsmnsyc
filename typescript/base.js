@@ -1,10 +1,13 @@
+const baseConfig = require('../base');
+
 module.exports = {
+  ...baseConfig,
   "extends": [
-    require.resolve('../base'),
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    ...baseConfig.extends,
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
@@ -19,6 +22,7 @@ module.exports = {
     }
   },
   "rules": {
+    ...baseConfig.rules,
     "import/extensions": [
       "error",
       "ignorePackages",

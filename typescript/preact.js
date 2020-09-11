@@ -1,11 +1,15 @@
+const baseConfig = require('./base');
+
 module.exports = {
+  ...baseConfig,
   "extends": [
     "preact",
     "airbnb",
     "airbnb/hooks",
-    require.resolve('./base'),
+    ...baseConfig.extends,
   ],
   "rules": {
+    ...baseConfig.rules,
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -18,3 +22,4 @@ module.exports = {
     ],
   },
 };
+

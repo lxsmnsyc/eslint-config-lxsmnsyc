@@ -1,11 +1,15 @@
+const baseConfig = require('./base');
+
 module.exports = {
+  ...baseConfig,
   "extends": [
     "plugin:react/recommended",
     "airbnb",
     "airbnb/hooks",
-    require.resolve('./base'),
+    ...baseConfig.extends,
   ],
   "rules": {
+    ...baseConfig.rules,
     "import/extensions": [
       "error",
       "ignorePackages",
