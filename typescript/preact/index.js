@@ -1,9 +1,9 @@
-const baseConfig = require('./base');
+const baseConfig = require('../base');
 
 module.exports = {
   ...baseConfig,
   "extends": [
-    "plugin:react/recommended",
+    "preact",
     "airbnb",
     "airbnb/hooks",
     ...baseConfig.extends,
@@ -20,6 +20,6 @@ module.exports = {
         "tsx": "never",
       }
     ],
-    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
   },
 };
+
