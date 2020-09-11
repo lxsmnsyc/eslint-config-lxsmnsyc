@@ -2,11 +2,21 @@ const baseConfig = require('../base');
 
 module.exports = {
   ...baseConfig,
+  "parserOptions": {
+    ...baseConfig.parserOptions,
+    "ecmaFeatures" : {
+      "jsx": true,
+    },
+  },
   "extends": [
     "plugin:react/recommended",
     "airbnb",
     "airbnb/hooks",
     ...baseConfig.extends,
+  ],
+  "plugins": [
+    ...baseConfig.plugins,
+    "react",
   ],
   "rules": {
     ...baseConfig.rules,

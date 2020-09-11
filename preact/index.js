@@ -8,6 +8,12 @@ module.exports = {
     "airbnb/hooks",
     ...baseConfig.extends,
   ],
+  "parserOptions": {
+    ...baseConfig.parserOptions,
+    "ecmaFeatures" : {
+      "jsx": true,
+    },
+  },
   "rules": {
     ...baseConfig.rules,
     "import/extensions": [

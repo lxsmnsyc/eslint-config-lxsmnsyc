@@ -1,3 +1,4 @@
+const base = require('../../base');
 const baseConfig = require('../base');
 
 module.exports = {
@@ -7,6 +8,16 @@ module.exports = {
     "airbnb",
     "airbnb/hooks",
     ...baseConfig.extends,
+  ],
+  "parserOptions": {
+    ...baseConfig.parserOptions,
+    "ecmaFeatures" : {
+      "jsx": true,
+    },
+  },
+  "plugins": [
+    ...baseConfig.plugins,
+    "react",
   ],
   "rules": {
     ...baseConfig.rules,
