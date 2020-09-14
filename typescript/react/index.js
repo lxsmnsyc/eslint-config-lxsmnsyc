@@ -14,6 +14,15 @@ module.exports = {
       "jsx": true,
     },
   },
+  "settings": {
+    ...baseConfig.settings,
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   "plugins": [
     ...baseConfig.plugins,
     "react",

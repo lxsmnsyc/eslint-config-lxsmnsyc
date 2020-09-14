@@ -8,6 +8,13 @@ module.exports = {
       "jsx": true,
     },
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": ['.js', '.jsx'],
+      },
+    },
+  },
   "extends": [
     "plugin:react/recommended",
     "airbnb",

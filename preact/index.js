@@ -14,6 +14,13 @@ module.exports = {
       "jsx": true,
     },
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": ['.js', '.jsx'],
+      },
+    },
+  },
   "rules": {
     ...baseConfig.rules,
     "import/extensions": [
