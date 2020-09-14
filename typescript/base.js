@@ -11,7 +11,8 @@ module.exports = {
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint"
+    ...baseConfig.plugins,
+    "@typescript-eslint",
   ],
   "settings": {
     "import/parsers": {

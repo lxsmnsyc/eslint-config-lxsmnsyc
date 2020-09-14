@@ -22,6 +22,9 @@ module.exports = {
       },
     },
   },
+  "plugins": [
+    "import",
+  ],
   "rules": {
     "import/extensions": [
       "error",
