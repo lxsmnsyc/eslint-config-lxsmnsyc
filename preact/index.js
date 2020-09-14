@@ -31,6 +31,8 @@ module.exports = {
         "jsx": "never",
       }
     ],
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+    "react/prop-types": "off",
   },
 };
 
