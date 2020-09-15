@@ -10,6 +10,7 @@ module.exports = {
   ],
   "parserOptions": {
     ...baseConfig.parserOptions,
+    "jsxPragma": "h", 
     "ecmaFeatures" : {
       "jsx": true,
     },
