@@ -40,5 +40,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "error",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error"
   }
 }
