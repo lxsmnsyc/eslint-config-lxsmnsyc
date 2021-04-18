@@ -16,6 +16,7 @@ module.exports = {
     },
   },
   "settings": {
+    ...baseConfig.settings,
     "import/resolver": {
       "node": {
         "extensions": ['.js', '.jsx'],

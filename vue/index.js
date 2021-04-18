@@ -2,6 +2,7 @@ const baseConfig = require('../base');
 
 module.exports = {
   ...baseConfig,
+  "parser": "vue-eslint-parser",
   "parserOptions": {
     ...baseConfig.parserOptions,
     "ecmaFeatures" : {
@@ -17,14 +18,14 @@ module.exports = {
     },
   },
   "extends": [
-    "plugin:react/recommended",
+    "plugin:vue/vue3-recommended",
     "airbnb",
     "airbnb/hooks",
     ...baseConfig.extends,
   ],
   "plugins": [
+    "vue",
     ...baseConfig.plugins,
-    "react",
   ],
   "rules": {
     ...baseConfig.rules,
@@ -36,11 +37,5 @@ module.exports = {
         "jsx": "never",
       }
     ],
-    "react/jsx-filename-extension": [1, { "extensions": [".jsx"] }],
-
-    // As of React 16.14 and 17
-    // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
   },
 };
