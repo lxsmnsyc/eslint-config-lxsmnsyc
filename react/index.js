@@ -2,45 +2,45 @@ const baseConfig = require('../base');
 
 module.exports = {
   ...baseConfig,
-  "parserOptions": {
+  'parserOptions': {
     ...baseConfig.parserOptions,
-    "ecmaFeatures" : {
-      "jsx": true,
+    'ecmaFeatures' : {
+      'jsx': true,
     },
   },
-  "settings": {
+  'settings': {
     ...baseConfig.settings,
-    "import/resolver": {
-      "node": {
-        "extensions": ['.js', '.jsx'],
+    'import/resolver': {
+      'node': {
+        'extensions': ['.js', '.jsx'],
       },
     },
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "airbnb/hooks",
+  'extends': [
+    'plugin:react/recommended',
+    'airbnb',
+    'airbnb/hooks',
     ...baseConfig.extends,
   ],
-  "plugins": [
+  'plugins': [
     ...baseConfig.plugins,
-    "react",
+    'react',
   ],
-  "rules": {
+  'rules': {
     ...baseConfig.rules,
-    "import/extensions": [
-      "error",
-      "ignorePackages",
+    'import/extensions': [
+      'error',
+      'ignorePackages',
       {
-        "js": "never",
-        "jsx": "never",
+        'js': 'never',
+        'jsx': 'never',
       }
     ],
-    "react/jsx-filename-extension": [1, { "extensions": [".jsx"] }],
+    'react/jsx-filename-extension': [1, { 'extensions': ['.jsx'] }],
 
     // As of React 16.14 and 17
     // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off'
   },
 };

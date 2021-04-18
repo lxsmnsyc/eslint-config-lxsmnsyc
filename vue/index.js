@@ -13,14 +13,13 @@ module.exports = {
     ...baseConfig.settings,
     "import/resolver": {
       "node": {
-        "extensions": ['.js', '.jsx'],
+        "extensions": ['.js', '.jsx', ".vue"],
       },
     },
   },
   "extends": [
     "plugin:vue/vue3-recommended",
     "airbnb",
-    "airbnb/hooks",
     ...baseConfig.extends,
   ],
   "plugins": [
@@ -35,6 +34,7 @@ module.exports = {
       {
         "js": "never",
         "jsx": "never",
+        "vue": "never"
       }
     ],
   },
