@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-lxsmnsyc",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "index.js",
   "repository": "https://github.com/LXSMNSYC/eslint-config-lxsmnsyc.git",
   "author": "Alexis Munsayac <alexis.munsayac@gmail.com>",
