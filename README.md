@@ -20,9 +20,13 @@ yarn add eslint-config-lxsmnsyc --dev
     "lxsmnsyc",
     "lxsmnsyc/react",
     "lxsmnsyc/preact",
+    "lxsmnsyc/solid",
+    "lxsmnsyc/vue",
     "lxsmnsyc/typescript",
     "lxsmnsyc/typescript/react",
     "lxsmnsyc/typescript/preact",
+    "lxsmnsyc/typescript/solid",
+    "lxsmnsyc/typescript/vue",
   ],
 }
 ```
