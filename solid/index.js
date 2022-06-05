@@ -19,7 +19,6 @@ module.exports = {
   'extends': [
     'plugin:react/recommended',
     'airbnb',
-    'airbnb/hooks',
     ...baseConfig.extends,
   ],
   'plugins': [
@@ -43,9 +42,13 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
 
+    'react/default-props-match-prop-types': 'off',
     'react/destructuring-assignment': 'off',
-    'react/no-unknown-property': 'off',
+    'react/display-name': 'off',
+    'react/no-array-index-key': 'off',
+    'react/require-default-props': 'off',
     'react/prop-types': 'off',
-    'react/require-default-props': 'off'
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-key': 'off'
   },
 };

@@ -42,10 +42,16 @@ module.exports = {
     'react/jsx-filename-extension': [1, { 'extensions': ['.jsx', '.tsx'] }],
     // As of React 16.14 and 17
     // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
- 
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+
+    'react/default-props-match-prop-types': 'off',
     'react/destructuring-assignment': 'off',
-    'react/no-unknown-property': 'off',
+    'react/display-name': 'off',
+    'react/no-array-index-key': 'off',
+    'react/require-default-props': 'off',
     'react/prop-types': 'off',
-    'react/require-default-props': 'off'
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-key': 'off'
   },
 };
