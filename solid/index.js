@@ -49,6 +49,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'react/jsx-key': 'off'
+    'react/jsx-key': 'off',
+    'react/jsx-no-constructed-context-values': 'off',
   },
 };
