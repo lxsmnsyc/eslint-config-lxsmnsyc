@@ -54,5 +54,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-key': 'off',
     'react/jsx-no-constructed-context-values': 'off',
+    'react/no-unused-prop-types': 'off',
   },
 };
