@@ -55,5 +55,6 @@ module.exports = {
     'react/jsx-key': 'off',
     'react/jsx-no-constructed-context-values': 'off',
     'react/no-unused-prop-types': 'off',
+    'react-hooks/rules-of-hooks': 'off',
   },
 };
