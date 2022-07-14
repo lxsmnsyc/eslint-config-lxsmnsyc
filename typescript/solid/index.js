@@ -56,5 +56,6 @@ module.exports = {
     'react/jsx-no-constructed-context-values': 'off',
     'react/no-unused-prop-types': 'off',
     'react-hooks/rules-of-hooks': 'off',
+    'react/no-unknown-property': 'off',
   },
 };
