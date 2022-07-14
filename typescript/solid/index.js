@@ -57,5 +57,6 @@ module.exports = {
     'react/no-unused-prop-types': 'off',
     'react-hooks/rules-of-hooks': 'off',
     'react/no-unknown-property': 'off',
+    'react/jsx-no-bind': 'off',
   },
 };
