@@ -55,5 +55,6 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'off',
     'react/no-unknown-property': 'off',
     'react/jsx-no-bind': 'off',
+    'react/no-unstable-nested-components': 'off',
   },
 };
