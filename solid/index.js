@@ -2,40 +2,43 @@ const baseConfig = require('../base');
 
 module.exports = {
   ...baseConfig,
-  'parserOptions': {
+  parserOptions: {
     ...baseConfig.parserOptions,
-    'ecmaFeatures' : {
-      'jsx': true,
+    ecmaFeatures: {
+      jsx: true,
     },
   },
-  'settings': {
+  settings: {
     ...baseConfig.settings,
     'import/resolver': {
-      'node': {
-        'extensions': ['.js', '.jsx'],
+      node: {
+        extensions: [
+          ...baseConfig.settings['import/resolver'].node.extensions,
+          '.jsx',
+        ],
       },
     },
   },
-  'extends': [
+  extends: [
     'plugin:react/recommended',
     'airbnb',
     ...baseConfig.extends,
   ],
-  'plugins': [
+  plugins: [
     ...baseConfig.plugins,
     'react',
   ],
-  'rules': {
+  rules: {
     ...baseConfig.rules,
     'import/extensions': [
       'error',
       'ignorePackages',
       {
-        'js': 'never',
-        'jsx': 'never',
-      }
+        ...baseConfig.rules['import/extensions'][2],
+        jsx: 'never',
+      },
     ],
-    'react/jsx-filename-extension': [1, { 'extensions': ['.jsx'] }],
+    'react/jsx-filename-extension': [1, { extensions: ['.jsx'] }],
 
     // As of React 16.14 and 17
     // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint

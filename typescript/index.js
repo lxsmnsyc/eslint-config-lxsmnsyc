@@ -2,7 +2,7 @@ const baseConfig = require('./base');
 
 module.exports = {
   ...baseConfig,
-  'extends': [
+  extends: [
     'airbnb-base',
     ...baseConfig.extends,
   ],

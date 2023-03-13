@@ -10,6 +10,10 @@ npm install eslint-config-lxsmnsyc --save-dev
 yarn add eslint-config-lxsmnsyc --dev
 ```
 
+```bash
+pnpm add eslint-config-lxsmnsyc
+```
+
 ## Usage
 
 `.eslintrc`

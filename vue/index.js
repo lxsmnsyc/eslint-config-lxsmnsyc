@@ -2,40 +2,44 @@ const baseConfig = require('../base');
 
 module.exports = {
   ...baseConfig,
-  "parser": "vue-eslint-parser",
-  "parserOptions": {
+  parser: 'vue-eslint-parser',
+  parserOptions: {
     ...baseConfig.parserOptions,
-    "ecmaFeatures" : {
-      "jsx": true,
+    ecmaFeatures: {
+      jsx: true,
     },
   },
-  "settings": {
+  settings: {
     ...baseConfig.settings,
-    "import/resolver": {
-      "node": {
-        "extensions": ['.js', '.jsx', ".vue"],
+    'import/resolver': {
+      node: {
+        extensions: [
+          ...baseConfig.settings['import/resolver'].node.extensions,
+          '.jsx',
+          '.vue',
+        ],
       },
     },
   },
-  "extends": [
-    "plugin:vue/vue3-recommended",
-    "airbnb",
+  extends: [
+    'plugin:vue/vue3-recommended',
+    'airbnb',
     ...baseConfig.extends,
   ],
-  "plugins": [
-    "vue",
+  plugins: [
+    'vue',
     ...baseConfig.plugins,
   ],
-  "rules": {
+  rules: {
     ...baseConfig.rules,
-    "import/extensions": [
-      "error",
-      "ignorePackages",
+    'import/extensions': [
+      'error',
+      'ignorePackages',
       {
-        "js": "never",
-        "jsx": "never",
-        "vue": "never"
-      }
+        ...baseConfig.rules['import/extensions'][2],
+        jsx: 'never',
+        vue: 'never',
+      },
     ],
   },
 };

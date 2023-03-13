@@ -2,44 +2,48 @@ const baseConfig = require('../base');
 
 module.exports = {
   ...baseConfig,
-  'parser': 'vue-eslint-parser',
-  'parserOptions': {
+  parser: 'vue-eslint-parser',
+  parserOptions: {
     ...baseConfig.parserOptions,
-    'parser': baseConfig.parser,
-    'ecmaFeatures' : {
-      'jsx': true,
+    parser: baseConfig.parser,
+    ecmaFeatures: {
+      jsx: true,
     },
   },
-  'settings': {
+  settings: {
     ...baseConfig.settings,
     'import/resolver': {
-      'typescript': {},
-      'node': {
-        'extensions': ['.js', '.jsx', '.ts', '.tsx', '.vue'],
+      typescript: {},
+      node: {
+        extensions: [
+          ...baseConfig.settings['import/resolver'].node.extensions,
+          '.jsx',
+          '.tsx',
+          '.vue',
+        ],
       },
     },
   },
-  'extends': [
+  extends: [
     'plugin:vue/vue3-recommended',
     'airbnb',
     ...baseConfig.extends,
   ],
-  'plugins': [
+  plugins: [
     'vue',
     ...baseConfig.plugins,
   ],
-  'rules': {
+  rules: {
     ...baseConfig.rules,
     'import/extensions': [
       'error',
       'ignorePackages',
       {
-        'js': 'never',
-        'jsx': 'never',
-        'ts': 'never',
-        'tsx': 'never',
-        'vue': 'never'
-      }
+        ...baseConfig.rules['import/extensions'][2],
+        jsx: 'never',
+        tsx: 'never',
+        vue: 'never',
+      },
     ],
   },
 };

@@ -2,39 +2,41 @@ const baseConfig = require('../base');
 
 module.exports = {
   ...baseConfig,
-  'extends': [
+  extends: [
     'preact',
     'airbnb',
     'airbnb/hooks',
     ...baseConfig.extends,
   ],
-  'parserOptions': {
+  parserOptions: {
     ...baseConfig.parserOptions,
-    'jsxPragma': 'h', 
-    'ecmaFeatures' : {
-      'jsx': true,
+    jsxPragma: 'h',
+    ecmaFeatures: {
+      jsx: true,
     },
   },
-  'settings': {
+  settings: {
     ...baseConfig.settings,
     'import/resolver': {
-      'node': {
-        'extensions': ['.js', '.jsx'],
+      node: {
+        extensions: [
+          ...baseConfig.settings['import/resolver'].node.extensions,
+          '.jsx',
+        ],
       },
     },
   },
-  'rules': {
+  rules: {
     ...baseConfig.rules,
     'import/extensions': [
       'error',
       'ignorePackages',
       {
-        'js': 'never',
-        'jsx': 'never',
-      }
+        ...baseConfig.rules['import/extensions'][2],
+        jsx: 'never',
+      },
     ],
-    'react/jsx-filename-extension': [1, { 'extensions': ['.jsx', '.tsx'] }],
+    'react/jsx-filename-extension': [1, { extensions: ['.jsx'] }],
     'react/prop-types': 'off',
   },
 };
-
