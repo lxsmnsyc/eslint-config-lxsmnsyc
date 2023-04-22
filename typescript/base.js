@@ -60,6 +60,9 @@ module.exports = {
     // https://typescript-eslint.io/rules/no-shadow
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
+    // https://typescript-eslint.io/rules/no-unused-vars
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
     // https://typescript-eslint.io/rules/no-unused-expressions
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': 'error',
