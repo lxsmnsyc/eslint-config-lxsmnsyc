@@ -36,5 +36,11 @@ module.exports = {
       },
     ],
     'import/no-unresolved': 'error',
+    // AIRBNB
+    'no-param-reassign': 'off',
+    'import/prefer-default-export': 'off',
+    'no-restricted-syntax': 'off',
+    'no-plusplus': 'off',
+    'no-underscore-dangle': 'off',
   },
 };
