@@ -80,7 +80,9 @@ module.exports = {
     // https://typescript-eslint.io/rules/explicit-function-return-type
     '@typescript-eslint/explicit-function-return-type': 'error',
     // https://typescript-eslint.io/rules/explicit-member-accessibility
-    '@typescript-eslint/explicit-member-accessibility': 'error',
+    '@typescript-eslint/explicit-member-accessibility': ['error', {
+      accessibility: 'no-public',
+    }],
     // https://typescript-eslint.io/rules/explicit-module-boundary-types
     '@typescript-eslint/explicit-module-boundary-types': 'error',
     // https://typescript-eslint.io/rules/no-base-to-string
@@ -109,8 +111,6 @@ module.exports = {
     '@typescript-eslint/no-redundant-type-constituents': 'error',
     // https://typescript-eslint.io/rules/no-require-imports
     '@typescript-eslint/no-require-imports': 'error',
-    // https://typescript-eslint.io/rules/no-type-alias
-    '@typescript-eslint/no-type-alias': 'error',
     // https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
     // https://typescript-eslint.io/rules/no-unnecessary-condition
@@ -154,7 +154,16 @@ module.exports = {
     '@typescript-eslint/brace-style': 'error',
     // https://typescript-eslint.io/rules/comma-dangle
     'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': 'error',
+    '@typescript-eslint/comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline',
+      functions: 'always-multiline',
+      enums: 'always-multiline',
+      generics: 'always-multiline',
+      tuples: 'always-multiline',
+    }],
     // https://typescript-eslint.io/rules/comma-spacing
     'comma-spacing': 'off',
     '@typescript-eslint/comma-spacing': 'error',
@@ -171,10 +180,10 @@ module.exports = {
     '@typescript-eslint/no-extra-parens': 'error',
     // https://typescript-eslint.io/rules/object-curly-spacing
     'object-curly-spacing': 'off',
-    '@typescript-eslint/object-curly-spacing': 'error',
+    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     // https://typescript-eslint.io/rules/quotes
     quotes: 'off',
-    '@typescript-eslint/quotes': 'error',
+    '@typescript-eslint/quotes': ['error', 'single'],
     // https://typescript-eslint.io/rules/space-before-blocks
     'space-before-blocks': 'off',
     '@typescript-eslint/space-before-blocks': 'error',
