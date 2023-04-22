@@ -177,7 +177,13 @@ module.exports = {
     '@typescript-eslint/member-delimiter-style': 'error',
     // https://typescript-eslint.io/rules/no-extra-parens
     'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': 'error',
+    '@typescript-eslint/no-extra-parens': ['off', 'all', {
+      conditionalAssign: true,
+      nestedBinaryExpressions: false,
+      returnAssign: false,
+      ignoreJSX: 'all', // delegate to eslint-plugin-react
+      enforceForArrowConditionals: false,
+    }],
     // https://typescript-eslint.io/rules/object-curly-spacing
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
