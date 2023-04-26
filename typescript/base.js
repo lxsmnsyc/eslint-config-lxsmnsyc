@@ -116,8 +116,6 @@ module.exports = {
     '@typescript-eslint/no-require-imports': 'error',
     // https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-    // https://typescript-eslint.io/rules/no-unnecessary-condition
-    '@typescript-eslint/no-unnecessary-condition': 'error',
     // https://typescript-eslint.io/rules/no-unnecessary-qualifier
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     // https://typescript-eslint.io/rules/no-unnecessary-type-arguments
