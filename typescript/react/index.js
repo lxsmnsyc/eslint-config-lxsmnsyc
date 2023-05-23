@@ -47,5 +47,9 @@ module.exports = {
     // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-no-useless-fragment': ['error', { allowExpressions: true }],
+    'react/jsx-no-constructed-context-values': 'off',
   },
 };
